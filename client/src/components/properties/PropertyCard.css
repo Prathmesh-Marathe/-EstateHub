@@ -1,0 +1,144 @@
+.property-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.property-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+}
+
+/* Image */
+.property-card-image {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+}
+
+.property-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.property-card:hover .property-card-image img { transform: scale(1.06); }
+
+.property-card-badges {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  gap: 6px;
+}
+
+.save-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  background: var(--white);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+  color: var(--text-muted);
+}
+
+.save-btn:hover, .save-btn.saved { color: #e53e3e; transform: scale(1.1); }
+
+.save-btn svg { width: 16px; height: 16px; }
+
+/* Body */
+.property-card-body { padding: 18px 20px 20px; flex: 1; display: flex; flex-direction: column; gap: 8px; }
+
+.property-type-badge {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gold-dark);
+}
+
+.property-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.property-location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.property-location svg { width: 13px; height: 13px; flex-shrink: 0; }
+
+.property-features {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.property-features span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.property-features svg { width: 13px; height: 13px; }
+
+.property-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.property-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--charcoal);
+}
+
+.price-suffix { font-size: 13px; font-weight: 400; color: var(--text-muted); font-family: 'DM Sans', sans-serif; }
+
+.owner-avatar {
+  width: 30px;
+  height: 30px;
+  background: linear-gradient(135deg, var(--charcoal), #374151);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+}
