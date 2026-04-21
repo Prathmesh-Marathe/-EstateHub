@@ -138,9 +138,9 @@ const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/real-e
 mongoose
   .connect(MONGODB_URI)
   .then(() => {
-    console.log('✅ MongoDB connected');
+    console.log(' MongoDB connected');
     server.listen(PORT, () => {
-      console.log(`🚀 Server + Socket.io running on port ${PORT}`);
+      console.log(` Server + Socket.io running on port ${PORT}`);
     });
   })
   .catch((err) => {
